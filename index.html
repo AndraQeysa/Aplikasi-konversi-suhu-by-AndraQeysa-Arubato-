@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Temperature Convert</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        count1 = () => {
+            let nilai = document.getElementById('celcius1').value;
+            let hitung = nilai * 0.8;
+            document.getElementById('reamur1').value = hitung;
+        }
+        count2 = () => {
+            let nilai = document.getElementById('reamur2').value;
+            let hitung = nilai * 4 / 9 + 32  ;
+            document.getElementById('fahrenheit1').value = hitung;
+        }
+        count3 = () => {
+            let nilai = document.getElementById('celcius2').value;
+            let hitung =nilai * 1.8 + 32;
+            document.getElementById('fahrenheit2').value = hitung;
+        }
+        count4 = () => {
+            let nilai = document.getElementById('kelvin2').value;
+            let hitung = (nilai - 273) * 1.8 + 32;
+            document.getElementById('fahrenheit3').value = hitung;
+        }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="card col-sm-6">
+                    <div class="card-header">
+                        <h4>Celcius to Reamur</h4>
+                    </div>
+                    <div class="card-body">
+                        <input type="number" id="celcius1" class="form-control" placeholder="Insert Value">
+                        <button type="button" class="btn btn-block btn-primary" onclick="count1()">Convert</button>
+                        <input type="text" id="reamur1" class="form-control" placeholder="Result" readonly>
+                    </div>
+                </div>
+                <div class="card col-sm-6">
+                    <div class="card-header">
+                        <h4>Reamur to Fahrenheit</h4>
+                    </div>
+                    <div class="card-body">
+                        <input type="number" id="reamur2" class="form-control" placeholder="Insert Value">
+                        <button type="button" class="btn btn-block btn-primary" onclick="count2()">Convert</button>
+                        <input type="text" id="fahrenheit1" class="form-control" placeholder="Result" readonly>
+                    </div>
+                </div>
+                <div class="card col-sm-6">
+                    <div class="card-header">
+                        <h4>Celcius to fahrenheit</h4>
+                    </div>
+                    <div class="card-body">
+                        <input type="number" id="celcius2" class="form-control" placeholder="Insert Value">
+                        <button type="button" class="btn btn-block btn-primary" onclick="count3()">Convert</button>
+                        <input type="text" id="fahrenheit2" class="form-control" placeholder="Result" readonly>
+                    </div>
+                </div>
+                <div class="card col-sm-6">
+                    <div class="card-header">
+                        <h4>Kelvin to Fahrenheit</h4>
+                    </div>
+                    <div class="card-body">
+                        <input type="number" id="kelvin2" class="form-control" placeholder="Insert Value">
+                        <button type="button" class="btn btn-block btn-primary" onclick="count4()">Convert</button>
+                        <input type="text" id="fahrenheit3" class="form-control" placeholder="Result" readonly>
+                    </div>
+                </div>
+            </div>
+            <h6>Copyright Arubato</h6>
+        </div>
+    </body>
+</html>
